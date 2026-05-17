@@ -1,0 +1,22 @@
+seed: 42
+data:
+  h5_path: data/mr_hisum.h5
+  metadata_path: data/metadata.csv
+  val_size: 0.15
+  test_size: 0.15
+  max_videos: null
+  use_synthetic_if_missing: true
+model:
+  type: temporal_mlp
+  hidden_dim: 256
+  dropout: 0.2
+training:
+  epochs: 30
+  batch_size: 8
+  lr: 0.001
+  weight_decay: 0.0001
+  patience: 5
+  grad_clip: 1.0
+outputs:
+  dir: outputs
+  checkpoints_dir: checkpoints
